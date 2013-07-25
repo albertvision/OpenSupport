@@ -16,5 +16,5 @@ $GLOBALS['config']['extra']['github']['username']='albertvision';
 $GLOBALS['config']['extra']['github']['project']='OpenSupport';
 $GLOBALS['config']['extra']['lang']='bg';
 $GLOBALS['config']['index']['enviroment']='development';
-define('SITE_PATH','http://local.breader.eu/');
+define('SITE_PATH','http://localhost/OpenSupport');
 //remember to edit the .js file at public (stories.js), also home.js includes some of it.
