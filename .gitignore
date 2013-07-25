@@ -216,3 +216,5 @@ pip-log.txt
 
 #NetBeans
 nbproject/
+#
+public/index.php
