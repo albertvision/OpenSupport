@@ -18,6 +18,14 @@
                 <!--Content should always be longer than sidebar-->
                 <div id="leftbar">
                     <h2>Page title</h2>
+                    <form method="post">
+                        <table>
+                            <tr><td>Title</td><td><input type="text" name="title"></td></tr>
+                            <tr><td>Email</td><td><input type="email" name="email"></td></tr>
+                            <tr><td>Problem description</td><td><textarea rows="5" cols="40"></textarea></td></tr>
+                            <tr><td colspan="2"> <input type="submit" name="act" value="Submit ticket"></td></tr>
+                        </table>
+                    </form>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nulla nibh, iaculis porta consequat sed, lacinia et libero. Mauris feugiat vitae quam quis sodales. Curabitur ut massa ligula. Donec eu scelerisque est. Phasellus pulvinar metus dui. Suspendisse rutrum augue ipsum. Cras mattis justo quis bibendum laoreet. Donec nulla lectus, commodo scelerisque congue in, elementum non magna. Phasellus vel eros cursus, malesuada dui in, sollicitudin erat. Nullam eget nibh massa. Nulla id dapibus est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin eu nisi nec est dignissim vehicula in nec sem. Phasellus venenatis, orci in porttitor faucibus, ligula sem convallis turpis, sed ultrices ipsum diam eget tellus. Ut venenatis sodales dui, sit amet dictum elit laoreet vitae. Curabitur vitae interdum lacus.
 
                     Praesent aliquam blandit dui sit amet pharetra. Proin eget pulvinar sem. Proin sem tellus, mollis ut facilisis id, faucibus vel mauris. Fusce imperdiet purus eu eros sollicitudin vehicula. Curabitur nec dui interdum elit semper egestas. Suspendisse mollis dui eu purus dignissim fringilla. Duis orci arcu, mattis nec ante eu, commodo porttitor erat. Vestibulum ipsum sem, ultrices ac urna eget, pellentesque pharetra risus. Curabitur a tellus vel orci aliquam suscipit. Etiam viverra enim metus, vel fringilla neque rutrum sed. Aliquam fringilla purus nunc. Vivamus vehicula est at odio consectetur fermentum. Nam pellentesque gravida erat.

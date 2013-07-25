@@ -7,7 +7,7 @@ body{
     margin: 0;
 }
 a {
-    color: @link;
+    color: black;
     text-decoration: none;
 }
 a:hover {
@@ -47,17 +47,20 @@ nav {
 
     }
     a:hover{
-        background-color:@link;
+        background-color:@special;
         color:white;
     }
 }
 #page{
+
+    text-align:justify;
     border-top:1px solid @special;
     #leftbar{
-        width:760px;
+        margin-right:40px;
+        width:700px;
         display:inline;
         float:left;
-        
+
     }
     #rightbar{
         display:inline;
@@ -69,4 +72,28 @@ nav {
 }
 h2{
     color:@special;
+}
+input[type="text"],input[type="email"],textarea{
+    box-shadow: 0;
+    padding:4px;
+    border:1px solid #CCCCCC;
+
+    border-radius:4px;
+}
+input[type="text"]:focus,input[type="email"]:focus,textarea:focus{
+    box-shadow:0 1px 1px lighten(@link,10%) inset, 0 0 6px lighten(@link,10%);
+}
+input[type="submit"]{
+    border:1px solid #ccc;
+    padding:5px;
+    border-radius:4px;
+    color:#333333;
+    background:linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+    box-shadow:0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05)
+}
+input[type="submit"]:hover{
+    color:#333;
+    text-shadow:0 1px 1px rgba(255, 255, 255, 0.75);
+    background:linear-gradient(to bottom, darken(#FFFFFF,7%), darken(#E6E6E6,7%));
+
 }
