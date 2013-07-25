@@ -1,16 +1,17 @@
 @background:#6e7884;
-
+@special:#ff3467;
+@link:lighten(@background,25%);
 body{
     background: @background;
     font-family:'Verdana';
     margin: 0;
 }
 a {
-    color: #000;
+    color: @link;
     text-decoration: none;
 }
 a:hover {
-    
+    text-decoration:underline;
 }
 #container{
     margin:0 auto;
@@ -19,14 +20,53 @@ a:hover {
     padding: 10px;
 }
 #logo {
+
     width: 200px;
     display: inline-block;
+
 }
-nav {
+#login-nav {
     text-align: right;
     display:inline;
     float:right;
+    a:hover{
+        color:@special;
+    }
 }
-#main-nav{
-    margin-top: 10px;
+nav {
+    text-align:right;
+    padding:0;
+    margin:0;
+    a{
+        padding:3px;
+        padding-bottom:0px;
+        margin:3px;
+        border-radius:3px 3px 0px 0px;
+        border:1px solid #6e7884;
+        border-bottom:0px;
+
+    }
+    a:hover{
+        background-color:@link;
+        color:white;
+    }
+}
+#page{
+    border-top:1px solid @special;
+    #leftbar{
+        width:760px;
+        display:inline;
+        float:left;
+        
+    }
+    #rightbar{
+        display:inline;
+        width:200px;
+    }
+}
+.clear{
+    clear:both;
+}
+h2{
+    color:@special;
 }
