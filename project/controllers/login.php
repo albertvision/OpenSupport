@@ -19,7 +19,9 @@ class login {
      */
     public function index() {
         $this->redirection->redirectIfLogged('redirectionController');
+        $this->loadView('siteTop');
         $this->loadView('login');
+        $this->loadView('siteFooter');
     }
 
     /**

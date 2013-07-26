@@ -81,14 +81,14 @@ nav {
 h2{
     color:@special;
 }
-input[type="text"],input[type="email"],textarea{
+input[type="text"],input[type="email"],input[type="password"],textarea{
     box-shadow: 0;
     padding:4px;
     border:1px solid #CCCCCC;
 
     border-radius:4px;
 }
-input[type="text"]:focus,input[type="email"]:focus,textarea:focus{
+input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus,textarea:focus{
     box-shadow:0 1px 1px lighten(@link,10%) inset, 0 0 6px lighten(@link,10%);
 }
 input[type="submit"]{
@@ -110,4 +110,20 @@ input[type="submit"]:hover{
     text-align:center;
     width:100%;
     background:lighten(@background,25%);
+}
+.filler{
+    margin-bottom:500px;
+}
+#login-box{
+    
+    max-width:300px;
+    margin:0 auto;
+    margin-top:100px;
+    padding:25px;
+    border-radius:5px;
+    border:1px solid grey;
+    table{
+        text-align:center;
+        margin:0 auto;
+    }
 }
