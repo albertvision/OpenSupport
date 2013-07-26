@@ -17,6 +17,9 @@ a:hover {
     margin:0 auto;
     width:960px;
     background:white;
+    margin-bottom:60px;
+}
+#page{
     padding: 10px;
 }
 #logo {
@@ -26,11 +29,13 @@ a:hover {
 
 }
 #login-nav {
+    padding-right:20px;
     text-align: right;
     display:inline;
     float:right;
     a:hover{
         color:@special;
+        
     }
 }
 nav {
@@ -47,6 +52,7 @@ nav {
 
     }
     a:hover{
+        border:1px solid @special;
         background-color:@special;
         color:white;
     }
@@ -96,4 +102,10 @@ input[type="submit"]:hover{
     text-shadow:0 1px 1px rgba(255, 255, 255, 0.75);
     background:linear-gradient(to bottom, darken(#FFFFFF,7%), darken(#E6E6E6,7%));
 
+}
+#footer{
+    border-top:1px solid @special;
+    text-align:center;
+    width:100%;
+    background:lighten(@background,25%);
 }
