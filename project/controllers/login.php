@@ -27,7 +27,8 @@ class login {
     /**
      * Handles the login
      */
-    public function ajaxLogin($username = '', $password = '') {
+    public function loginSubmit() {
+        $this->loadView('siteTop');
         $this->loadModel('login_model');
         $escaped_data = $this->login_model->escapeData($_POST);
         //echo 'qwe';
@@ -35,38 +36,14 @@ class login {
         if ($this->login_model->checkData($escaped_data)) {
             $this->login_model->createSession();
             $return['success'] = true;
+            $this->redirection->redirectIfLogged('profile');
         } else {
             $return['success'] = false;
             $return['error'] = 'INVALID_DATA';
         }
         //print_r($return);
-        $this->loadView('JsonDisplay', $return);
-    }
-
-    /**
-     * Handles ajax register
-     * @return type
-     */
-    public function ajaxRegister() {
-        $this->loadModel('register_model');
-
-        $rs = $this->register_model->validateData($_POST);
-        if ($rs['success'] == false) {
-
-            $this->loadView('JsonDisplay', $rs);
-            return;
-        } else {
-            $insertingData = $this->register_model->escapeData($_POST);
-            $this->register_model->doRegister($insertingData);
-            $this->loadView('JsonDisplay', $rs);
-            $this->loadLibrary('mailer');
-            $mailText = 'Welcome to bReader! 
-Here are your user details to get you started! 
-Username:' . $_POST['username'] . '
-Password:' . $_POST['password'] . '
-(note:your password is hashed. This is the last time we have it in plain text)';
-            $this->mailer->sendMail('Welcome to bReader!', $GLOBALS['config']['system']['email'], $_POST['username'], $mailText);
-        }
+        $this->loadView('login', $return);
+        $this->loadView('siteFooter');
     }
 
     /**
