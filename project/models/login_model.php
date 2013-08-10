@@ -25,7 +25,6 @@ class login_model {
      * Checks if data is valid
      */
     public function checkData($data) {
-        echo 'Password:'.$data['password'];
         $this->database->query('SELECT * FROM users WHERE username="' . $data['username'] . '" AND password="' . $data['password'] . '"');
         if ($this->database->getRows() == 1) {
             return true;
